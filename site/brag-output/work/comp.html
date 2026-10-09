@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>brag — pinhão.</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#050505}
+  body{font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;position:relative}
+  .abs{position:absolute}
+  #bg{inset:0;background:#050505}
+  /* gancho */
+  #hook{inset:0}
+  #glow{left:540px;top:1180px;width:760px;height:760px;margin:-380px 0 0 -380px;border-radius:50%;filter:blur(150px)}
+  .himg{left:90px;top:760px;width:900px;height:853px;object-fit:contain}
+  #hookTxt{left:80px;right:80px;top:210px;color:#F5F5F7}
+  #hookA{font-size:52px;font-weight:600;color:#C7C7CC;letter-spacing:-0.03em}
+  #hookB{font-size:128px;line-height:0.92;font-weight:800;letter-spacing:-0.06em;margin-top:22px}
+  /* legendas */
+  #cap{left:80px;right:80px;top:120px;height:270px}
+  .cap{position:absolute;left:0;right:0;top:0}
+  .lab{font-family:'Geist Mono',monospace;font-size:28px;font-weight:600;color:#B4531F;letter-spacing:0.06em}
+  .hd{margin-top:18px;font-size:66px;line-height:1.0;font-weight:800;letter-spacing:-0.05em;color:#111}
+  .hd span{color:#8E8E93}
+  /* celular */
+  #phone{left:208px;top:430px;width:664px;height:1400px;border-radius:92px;background:#1D1D1F;box-shadow:0 60px 120px -40px rgba(0,0,0,.45),0 0 0 3px #3A3A3C inset}
+  #screen{position:absolute;left:16px;top:16px;width:632px;height:1368px;border-radius:78px;overflow:hidden;background:#FFF}
+  #scaler{position:absolute;left:0;top:0;width:390px;height:844px;transform-origin:0 0;transform:scale(1.6205)}
+  #status{position:absolute;left:0;top:0;width:390px;height:50px;background:#FFF;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:0 30px 0 38px;box-sizing:border-box;font-size:16px;font-weight:600}
+  #island{position:absolute;left:50%;top:11px;width:122px;height:34px;margin-left:-61px;border-radius:20px;background:#000}
+  .scr{position:absolute;left:0;top:50px;width:390px;height:794px;border:0;background:#FFF}
+  /* whatsapp */
+  #wa{background:#EFEAE2;font-family:'Geist',system-ui,sans-serif;display:flex;flex-direction:column;overflow:hidden}
+  #waHead{height:58px;background:#F7F7F7;border-bottom:1px solid #E2E2E2;display:flex;align-items:center;gap:10px;padding:0 12px}
+  #waBody{flex:1;position:relative}
+  #waBar{height:62px;background:#F7F7F7;display:flex;align-items:center;gap:8px;padding:0 10px 6px}
+  #waInput{flex:1;height:40px;border-radius:20px;background:#FFF;border:1px solid #E2E2E2;display:flex;align-items:center;justify-content:flex-end;overflow:hidden;white-space:nowrap;padding:0 14px;font-size:15px;color:#111}
+  #waSend{width:40px;height:40px;border-radius:50%;background:#1DAA61;display:grid;place-items:center}
+  #bubble{position:absolute;right:10px;bottom:16px;max-width:300px;background:#D9FDD3;border-radius:12px 12px 4px 12px;padding:9px 11px 7px;font-size:15.5px;line-height:1.38;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08);transform-origin:100% 100%}
+  #bubMeta{display:flex;justify-content:flex-end;gap:4px;align-items:center;font-size:11.5px;color:#667781;margin-top:3px}
+  #pill{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:#FFF;border-radius:8px;padding:5px 12px;font-size:12.5px;color:#54656F;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+  /* toque */
+  #touch{width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;background:rgba(17,17,17,.22);border:3px solid rgba(255,255,255,.95);box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:20;pointer-events:none}
+  #ring{width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;border:3px solid rgba(15,61,46,.55);z-index:19}
+  /* final */
+  #outro{inset:0;color:#F3EDE4}
+  #oDrop{left:80px;top:470px}
+  .oL{position:absolute;left:80px;font-size:124px;line-height:1;font-weight:800;letter-spacing:-0.06em}
+  #oSub{left:80px;right:80px;top:1200px;font-size:46px;line-height:1.2;font-weight:500;color:#C9D8D0;letter-spacing:-0.02em}
+  #oFoot{left:80px;right:80px;bottom:120px;font-family:'Geist Mono',monospace;font-size:24px;color:#9FC4B4;letter-spacing:0.03em}
+</style>
+</head>
+<body>
+<div id="bg" class="abs"></div>
+
+<div id="hook" class="abs">
+  <div id="glow" class="abs"></div>
+  <img id="h1" class="abs himg" src="../../assets/18pro-burgundy.png">
+  <img id="h2" class="abs himg" src="../../assets/18pro-glacier.png">
+  <div id="hookTxt" class="abs">
+    <div id="hookA">Sua revenda de iPhone merece</div>
+    <div id="hookB"><span id="hb1" style="display:block">parecer uma</span><span id="hb2" style="display:block">Apple Store<span style="color:#C8632B">.</span></span></div>
+  </div>
+</div>
+
+<div id="cap" class="abs">
+  <div class="cap" id="c1"><div class="lab">01 · VITRINE</div><div class="hd">Sua vitrine,<br><span>no celular do cliente.</span></div></div>
+  <div class="cap" id="c2"><div class="lab">02 · CONFIGURAR</div><div class="hd">Cor, memória e parcela.<br><span>Preço na hora.</span></div></div>
+  <div class="cap" id="c3"><div class="lab">03 · AVALIAR</div><div class="hd">O usado vira entrada.<br><span>Na hora.</span></div></div>
+  <div class="cap" id="c4"><div class="lab">04 · FECHAR</div><div class="hd">Chega no seu WhatsApp.<br><span>Tudo escrito.</span></div></div>
+</div>
+
+<div id="phone" class="abs">
+  <div id="screen">
+    <div id="scaler">
+      <div id="status"><span>9:41</span><div id="island"></div>
+        <span style="display:flex;gap:6px;align-items:center">
+          <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+          <svg width="26" height="13" viewBox="0 0 26 13"><rect x="0.5" y="0.5" width="22" height="12" rx="3.5" fill="none" stroke="#111" opacity=".4"/><rect x="2.5" y="2.5" width="16" height="8" rx="2"/><rect x="24" y="4" width="1.6" height="5" rx="1" opacity=".4"/></svg>
+        </span>
+      </div>
+      <iframe id="fHome" class="scr" src="../../index.html"></iframe>
+      <iframe id="fProd" class="scr" src="../../produto.html"></iframe>
+      <iframe id="fAval" class="scr" src="../../avaliar.html"></iframe>
+      <div id="wa" class="scr">
+        <div id="waHead">
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#1DAA61" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 10l8 8"/></svg>
+          <div style="width:38px;height:38px;border-radius:50%;background:#0F3D2E;display:grid;place-items:center"><svg width="20" height="20" viewBox="0 0 32 32"><path d="M16 2.5c5.8 6.6 10 12.6 10 18a10 10 0 0 1-20 0c0-5.4 4.2-11.4 10-18z" fill="#C8632B"/></svg></div>
+          <div style="display:flex;flex-direction:column;flex:1"><strong style="font-size:16px;font-weight:600">pinhão. Batel</strong><span style="font-size:12.5px;color:#667781">conta comercial</span></div>
+        </div>
+        <div id="waBody">
+          <div id="pill">Hoje</div>
+          <div id="bubble"><div id="bubTxt"></div><div id="bubMeta"><span>14:32</span>
+            <svg id="ticks" width="18" height="11" viewBox="0 0 18 11" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6l3 3 6-7"/><path d="M7 8.5l1 .5 6-7"/></svg></div></div>
+        </div>
+        <div id="waBar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#54656F" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <div id="waInput"><span id="waTyped" style="color:#8696A0">Mensagem</span></div>
+          <div id="waSend"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFF"><path d="M3 20l18-8L3 4v6l12 2-12 2z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ring" class="abs"></div>
+<div id="touch" class="abs"></div>
+
+<div id="outro" class="abs">
+  <svg id="oDrop" class="abs" width="120" height="120" viewBox="0 0 32 32"><path d="M16 2.5c5.8 6.6 10 12.6 10 18a10 10 0 0 1-20 0c0-5.4 4.2-11.4 10-18z" fill="#C8632B"/><path d="M14.5 10c-2 3-3.2 6-3.2 9" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/></svg>
+  <div class="oL" id="o1" style="top:680px">Sua marca.</div>
+  <div class="oL" id="o2" style="top:806px">Suas cores.</div>
+  <div class="oL" id="o3" style="top:932px;color:#E08A50">Seu domínio.</div>
+  <div id="oSub" class="abs">A vitrine digital feita para<br>revendas de iPhone.</div>
+  <div id="oFoot" class="abs">Loja de demonstração · pinhão. é uma marca fictícia</div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ramp = (t, a, b) => clamp((t - a) / (b - a));
+const eo = (x) => 1 - Math.pow(1 - x, 3);            // ease out cubic
+const eio = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const lerp = (a, b, x) => a + (b - a) * x;
+const mix = (c1, c2, x) => { const p = (c) => [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)); const A = p(c1), B = p(c2); return `rgb(${A.map((v, i) => Math.round(lerp(v, B[i], x))).join(',')})`; };
+const S = 1.6205, SX = 208 + 16, SY = 430 + 16;       // tela do celular na composição
+
+const F = { home: $('#fHome'), prod: $('#fProd'), aval: $('#fAval') };
+const D = (k) => F[k].contentDocument;
+const W = (k) => F[k].contentWindow;
+const q = (k, s, i = 0) => D(k).querySelectorAll(s)[i];
+
+// ---------- linha do tempo (segundos) ----------
+const T = {
+  hookOut: 3.5, phoneIn: 3.75, cap1: 4.1, home2prod: 7.0, prod2aval: 11.7, aval2wa: 16.25, outro: 19.6, end: 23.0
+};
+const taps = [  // toques visíveis: [tempo do toque, página, seletor, índice]
+  [8.0, 'prod', '#colors [role=radio]', 1],
+  [9.55, 'prod', '#storages [role=radio]', 1],
+  [10.35, 'prod', '#plans [role=radio]', 3],
+  [12.35, 'aval', '#storages [role=radio]', 1],
+  [13.05, 'aval', '#bats [role=radio]', 1],
+  [15.85, 'aval', '#whats', 0, true]   // só o gesto, sem navegar
+];
+const events = [
+  [4.9, () => q('home', '#heroDots [role=radio]', 1).click()],
+  ...taps.filter((x) => !x[4]).map(([t, k, s, i]) => [t, () => q(k, s, i).click()]),
+  [15.85, () => { MSG = decodeURIComponent(q('aval', '#whats').href.split('text=')[1]); }]
+];
+let MSG = '';
+let fired = 0;
+const born = new WeakMap();
+
+function scrollFor(k, t) {   // rolagem de cada página em função do tempo
+  if (k === 'home') return lerp(0, 330, eio(ramp(t, 4.35, 5.6))) + lerp(0, 520, eio(ramp(t, 5.9, 6.9)));
+  if (k === 'prod') return lerp(0, SCROLL.prod1, eio(ramp(t, 7.25, 7.8))) + lerp(0, SCROLL.prod - SCROLL.prod1, eio(ramp(t, 8.6, 9.2)));
+  if (k === 'aval') return lerp(0, SCROLL.aval1, eio(ramp(t, 11.7, 11.7))) + lerp(0, SCROLL.aval2, eio(ramp(t, 13.5, 14.5)));
+  return 0;
+}
+const SCROLL = { prod: 0, aval1: 0, aval2: 0 };
+
+function syncAnims(k, birth) {
+  const doc = k ? D(k) : document;
+  for (const a of doc.getAnimations()) {
+    if (a.timeline && a.timeline !== doc.timeline) continue;   // animações por rolagem seguem a rolagem
+    if (!born.has(a)) born.set(a, birth);
+    a.pause();
+  }
+}
+function setAnims(k, t) {
+  const doc = D(k);
+  for (const a of doc.getAnimations()) {
+    if (a.timeline && a.timeline !== doc.timeline) continue;
+    if (!born.has(a)) born.set(a, t);
+    a.pause();
+    a.currentTime = Math.max(0, t - born.get(a)) * 1000;
+  }
+}
+
+function rectOf(k, s, i) {   // posição do elemento na composição
+  const r = q(k, s, i).getBoundingClientRect();
+  return { x: SX + r.left * S + r.width * S / 2, y: SY + (50 + r.top) * S + r.height * S / 2 };
+}
+
+window.prepare = async () => {
+  await Promise.all(Object.values(F).map((f) => new Promise((res) => f.contentDocument && f.contentDocument.readyState === 'complete' ? res() : f.addEventListener('load', res))));
+  for (const k in F) {
+    D(k).documentElement.style.scrollBehavior = 'auto';
+    D(k).querySelectorAll('img[loading]').forEach((im) => im.loading = 'eager');
+  }
+  q('home', '#heroDots [role=radio]', 0).click();       // pausa a troca automática (a troca vem pela linha do tempo)
+  await new Promise((r) => setTimeout(r, 1500));
+  await Promise.all([document, ...Object.keys(F).map(D)].map((d) => d.fonts.ready));
+  await Promise.all([...document.images, ...Object.keys(F).flatMap((k) => [...D(k).images])].map((im) => im.complete ? 0 : new Promise((r) => { im.onload = im.onerror = r; })));
+  // alvos de rolagem medidos no layout real
+  const top = (k, s) => q(k, s).getBoundingClientRect().top + W(k).scrollY;
+  SCROLL.prod = Math.round(top('prod', '#storages') - 70);
+  SCROLL.prod1 = Math.round(top('prod', '#colors') - 600);
+  SCROLL.aval2 = Math.round(top('aval', '#range') - 300);
+  for (const k in F) { W(k).scrollTo(0, 0); syncAnims(k, 0); }
+  return SCROLL;
+};
+
+window.seek = (t) => {
+  // eventos (cliques reais nos botões do site)
+  while (fired < events.length && events[fired][0] <= t) {
+    const [te, fn] = events[fired++];
+    fn();
+    for (const k in F) syncAnims(k, te);
+  }
+  for (const k in F) { W(k).scrollTo({ top: scrollFor(k, t), behavior: 'instant' }); setAnims(k, t); }
+
+  // fundo
+  const toLight = eio(ramp(t, 3.55, 4.1)), toPine = eio(ramp(t, T.outro - 0.15, T.outro + 0.45));
+  $('#bg').style.background = toPine > 0 ? mix('#F5F5F7', '#0F3D2E', toPine) : mix('#050505', '#F5F5F7', toLight);
+
+  // gancho
+  const hIn = (a) => eo(ramp(t, a, a + 0.7));
+  const hOut = eio(ramp(t, T.hookOut, T.hookOut + 0.35));
+  $('#hook').style.opacity = 1 - hOut;
+  $('#hook').style.display = t > T.hookOut + 0.4 ? 'none' : '';
+  [['#hookA', 0.05], ['#hb1', 0.25], ['#hb2', 0.4]].forEach(([s, a]) => { const x = hIn(a); $(s).style.opacity = x; $(s).style.transform = `translateY(${(1 - x) * 46}px)`; });
+  const sw = eio(ramp(t, 1.75, 2.55));
+  $('#h2').style.opacity = sw;
+  $('#h1').style.opacity = 1;
+  const imgIn = eo(ramp(t, 0, 1.2));
+  const zoom = 0.92 + 0.08 * imgIn + 0.03 * ramp(t, 0, 3.6) - 0.06 * hOut;
+  ['#h1', '#h2'].forEach((s) => { $(s).style.transform = `translateY(${(1 - imgIn) * 80 + Math.sin(t * 1.4) * 8 - hOut * 60}px) scale(${zoom})`; });
+  $('#h1').style.opacity = imgIn;
+  $('#h2').style.opacity = imgIn * sw;
+  $('#glow').style.background = mix('#8A2638', '#6F93B8', sw);
+  $('#glow').style.opacity = 0.75 * imgIn;
+
+  // celular
+  const pIn = eo(ramp(t, T.phoneIn, T.phoneIn + 0.85));
+  const pOut = eio(ramp(t, T.outro - 0.3, T.outro + 0.3));
+  $('#phone').style.transform = `translateY(${(1 - pIn) * 1500 + pOut * 1500}px)`;
+  $('#phone').style.display = pIn <= 0 || pOut >= 1 ? 'none' : '';
+
+  // telas: sai a antiga (para branco), entra a nova
+  const vis = (a, b) => (b == null ? 1 : 1 - eio(ramp(t, b - 0.22, b))) * (a == null ? 1 : eio(ramp(t, a, a + 0.28)));
+  $('#fHome').style.opacity = vis(null, T.home2prod);
+  $('#fProd').style.opacity = vis(T.home2prod, T.prod2aval);
+  $('#fAval').style.opacity = vis(T.prod2aval, T.aval2wa);
+  $('#wa').style.opacity = vis(T.aval2wa, null);
+  ['#fHome', '#fProd', '#fAval', '#wa'].forEach((s) => $(s).style.visibility = +$(s).style.opacity > 0.001 ? 'visible' : 'hidden');
+
+  // legendas
+  const caps = [['#c1', T.cap1, T.home2prod], ['#c2', T.home2prod + 0.05, T.prod2aval], ['#c3', T.prod2aval + 0.05, T.aval2wa], ['#c4', T.aval2wa + 0.05, T.outro - 0.1]];
+  caps.forEach(([s, a, b]) => {
+    const i = eo(ramp(t, a, a + 0.5)), o = eio(ramp(t, b - 0.3, b - 0.05));
+    $(s).style.opacity = i * (1 - o);
+    $(s).style.transform = `translateY(${(1 - i) * 30 - o * 20}px)`;
+  });
+
+  // toque
+  let tx = 0, ty = 0, ta = 0, ts = 1, ra = 0, rs = 1;
+  for (const [tt, k, s, i] of taps) {
+    if (t < tt - 0.45 || t > tt + 0.5) continue;
+    const p = rectOf(k, s, i);
+    tx = p.x; ty = p.y;
+    ta = ramp(t, tt - 0.45, tt - 0.2) * (1 - ramp(t, tt + 0.2, tt + 0.5));
+    ts = 1 - 0.18 * Math.sin(Math.PI * ramp(t, tt - 0.1, tt + 0.15));
+    const rp = ramp(t, tt, tt + 0.45);
+    ra = rp > 0 ? (1 - rp) * 0.9 : 0; rs = 1 + rp * 1.4;
+  }
+  $('#touch').style.cssText = `left:${tx}px;top:${ty}px;opacity:${ta};transform:scale(${ts})`;
+  $('#ring').style.cssText = `left:${tx}px;top:${ty}px;opacity:${ra};transform:scale(${rs})`;
+
+  // WhatsApp
+  const typeP = ramp(t, 16.65, 17.55);
+  const sent = t >= 17.75;
+  const n = Math.round(MSG.length * eio(typeP));
+  $('#waTyped').textContent = sent || n === 0 ? 'Mensagem' : MSG.slice(0, n);
+  $('#waTyped').style.color = sent || n === 0 ? '#8696A0' : '#111';
+  $('#waInput').style.justifyContent = sent || n === 0 ? 'flex-start' : 'flex-end';
+  $('#bubTxt').textContent = MSG;
+  const b = eo(ramp(t, 17.75, 18.15));
+  $('#bubble').style.opacity = b;
+  $('#bubble').style.transform = `translateY(${(1 - b) * 24}px) scale(${0.92 + 0.08 * b})`;
+  $('#ticks').style.stroke = t > 18.45 ? '#53BDEB' : '#8696A0';
+
+  // final
+  const oA = (a) => eo(ramp(t, a, a + 0.6));
+  $('#outro').style.display = t < T.outro - 0.2 ? 'none' : '';
+  [['#oDrop', T.outro + 0.15], ['#o1', T.outro + 0.3], ['#o2', T.outro + 0.6], ['#o3', T.outro + 0.9], ['#oSub', T.outro + 1.35], ['#oFoot', T.outro + 1.6]].forEach(([s, a]) => {
+    const x = oA(a); $(s).style.opacity = x; $(s).style.transform = `translateY(${(1 - x) * 40}px)`;
+  });
+  return true;
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loja — pinhão.</title>
+<meta name="description" content="iPhone, Mac, iPad, Watch e AirPods novos e seminovos no Batel, Curitiba.">
+<meta name="theme-color" content="#0F3D2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5c5.8 6.6 10 12.6 10 18a10 10 0 0 1-20 0c0-5.4 4.2-11.4 10-18z' fill='%23C8632B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body class="has-tabbar">
+
+<header style="position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #ECECEF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 12px 0 20px; height: 64px; display: flex; align-items: center; gap: 28px">
+<a href="index.html" aria-label="pinhão. página inicial" style="display: flex; align-items: center; gap: 8px; color: #111111; text-decoration: none; flex: 0 0 auto">
+<svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5c5.8 6.6 10 12.6 10 18a10 10 0 0 1-20 0c0-5.4 4.2-11.4 10-18z" fill="#C8632B"></path><path d="M14.5 10c-2 3-3.2 6-3.2 9" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"></path></svg>
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.055em">pinhão<span style="color: #C8632B">.</span></span>
+</a>
+<nav class="rail topnav" aria-label="Categorias" style="display: flex; gap: 26px; overflow-x: auto; flex: 1 1 auto; min-width: 0; font-size: 14px; white-space: nowrap">
+<a href="loja.html?cat=iphone" data-cat="iphone" data-cond="todos" style="color: #111111; text-decoration: none">iPhone</a>
+<a href="loja.html?cat=mac" data-cat="mac" data-cond="todos" style="color: #111111; text-decoration: none">Mac</a>
+<a href="loja.html?cat=ipad" data-cat="ipad" data-cond="todos" style="color: #111111; text-decoration: none">iPad</a>
+<a href="loja.html?cat=watch" data-cat="watch" data-cond="todos" style="color: #111111; text-decoration: none">Watch</a>
+<a href="loja.html?cat=airpods" data-cat="airpods" data-cond="todos" style="color: #111111; text-decoration: none">AirPods</a>
+<a href="loja.html?cat=acessorios" data-cat="acessorios" data-cond="todos" style="color: #111111; text-decoration: none">Acessórios</a>
+<a href="loja.html?cond=semi" data-cat="todos" data-cond="semi" style="color: #111111; text-decoration: none">Seminovos</a>
+<a href="avaliar.html" style="color: #B4531F; text-decoration: none; font-weight: 600">Avaliar meu usado</a>
+</nav>
+<div style="display: flex; gap: 2px; flex: 0 0 auto; margin-left: auto">
+<button aria-label="Sacola, 2 itens" style="position: relative; width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; color: #111111; display: grid; place-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span style="position: absolute; top: 6px; right: 5px; min-width: 16px; height: 16px; border-radius: 999px; background: #C8632B; color: #FFFFFF; font-size: 10px; font-weight: 700; display: grid; place-items: center">2</span></button>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1240px; margin: 0 auto; padding: 32px 20px 72px">
+
+<div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px">
+<span id="crumb" style="font-size: 13px; color: #6E6E73">Loja</span>
+<h1 id="title" style="margin: 0; font-size: clamp(32px, 4.4vw, 52px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">Loja.</h1>
+</div>
+
+<div class="rail shop-chips" id="chips" style="display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 14px"></div>
+
+<div class="shop">
+<aside class="shop-side" aria-label="Categorias">
+<strong style="font-size: 13px; letter-spacing: 0.04em; color: #6E6E73">CATEGORIAS</strong>
+<nav id="side" style="display: flex; flex-direction: column; gap: 2px; margin-top: 12px"></nav>
+<a href="avaliar.html" style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 20px; background: #0F3D2E; color: #F3EDE4; text-decoration: none">
+<strong style="font-size: 17px; letter-spacing: -0.02em">Tem um iPhone usado?</strong>
+<span style="font-size: 13px; color: #C9D8D0; line-height: 1.4">Use como entrada. Simule o valor em 1 minuto ›</span>
+</a>
+</aside>
+
+<section style="min-width: 0">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px">
+<label style="flex: 1 1 260px; position: relative; display: block">
+<span class="sr">Buscar produtos</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="1.8" stroke-linecap="round" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%)"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input id="q" type="search" placeholder="Buscar modelo, cor, armazenamento…" style="width: 100%; height: 46px; border-radius: 999px; border: 1px solid #D2D2D7; background: #FFFFFF; padding: 0 18px 0 44px; font-size: 15px">
+</label>
+<div id="cond" role="radiogroup" aria-label="Condição" style="display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: #F0F0F3"></div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #6E6E73">Ordenar
+<select id="sort" style="height: 44px; border-radius: 999px; border: 1px solid #D2D2D7; background: #FFFFFF; padding: 0 14px; font-size: 14px; color: #111111">
+<option value="relevancia">Relevância</option>
+<option value="menor">Menor preço</option>
+<option value="maior">Maior preço</option>
+</select>
+</label>
+</div>
+<p id="result" style="margin: 0 0 16px; font-size: 14px; color: #6E6E73">Mostrando 0 produtos</p>
+<div id="grid" class="shop-grid"></div>
+</section>
+</div>
+
+</main>
+
+<footer style="background: #F5F5F7; border-top: 1px solid #E8E8ED">
+<div style="max-width: 1240px; margin: 0 auto; padding: 32px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #6E6E73">
+<span>© 2026 pinhão. · marca fictícia de demonstração · preços e produtos de exemplo</span>
+<span>Apple, iPhone, iPad, Mac, Apple Watch e AirPods são marcas da Apple Inc. Revenda independente.</span>
+</div>
+</footer>
+
+<a href="#" class="wa" aria-label="Falar no WhatsApp" style="position: fixed; right: 20px; bottom: 22px; z-index: 40; width: 58px; height: 58px; border-radius: 50%; background: #1F8A4C; color: #FFFFFF; display: grid; place-items: center; box-shadow: 0 16px 30px -12px rgba(0,0,0,0.45)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2L4 20z"></path><path d="M9.5 9.5c0 2.5 2.5 5 5 5l1-1.5-2-1-1 1c-.8-.4-1.6-1.2-2-2l1-1-1-2-1 1.5z"></path></svg></a>
+
+<nav class="tabbar" aria-label="Navegação principal">
+<a href="index.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l8-6 8 6v10H4z"></path><path d="M10 20v-6h4v6"></path></svg>Início</a>
+<a href="loja.html" class="on"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"></path></svg>Loja</a>
+<a href="avaliar.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v4h-4"></path></svg>Avaliar usado</a>
+<a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Sacola</a>
+</nav>
+
+<script src="js/common.js"></script>
+<script src="js/loja.js"></script>
+</body>
+</html>
