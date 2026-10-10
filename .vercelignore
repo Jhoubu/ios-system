@@ -1,0 +1,4 @@
+# Fora do deploy: material do vídeo de divulgação e configs locais
+site/brag-output
+.claude
+package-lock.json
